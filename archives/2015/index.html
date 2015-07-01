@@ -64,6 +64,83 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-python-for-的运用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/01/python-for-的运用/" class="article-date">
+  <time datetime="2015-07-01T15:00:07.000Z" itemprop="datePublished">2015-07-1</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/01/python-for-的运用/">Python for 的运用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、enumerate">一、<a href="#001">enumerate</a></h1><h1 id="二、dict_items_iteritems">二、<a href="#002">dict items iteritems</a></h1><h2 id="一、enumerate:"><a name="001">一、enumerate:</a></h2><pre><code>
+dict_a = {"a":1,"b":2}
+for k,v in enumerate(dict_a):
+    print k,v 
+结果:
+0 a
+1 b
+
+
+sli = ["a","b","c"]
+for k,v in enumerate(sli):
+    print k,v
+结果:
+0 a
+1 b
+2 c
+
+结论:enumerate是每个元素的k返回的是每个元素的位置,v是元素的值
+</code></pre>
+
+
+<h2 id="二、dict_items_iteritems:"><a name="002">二、dict items iteritems:</a></h2><pre><code>
+dict_a = {"a":1,"b":2}
+for (k,v)in dict_a.items():
+     print k,v
+结果:
+a 1
+b 2
+
+for k,v in dict_a.iteritems():
+    print k,v
+结果:
+a 1
+b 2
+
+items和iteritems 都可以遍历出 键和值，
+items函数返回的是键值对的元组的列表，而iteritems使用的是键值对的generator。 
+</code></pre>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://linjz.com/2015/07/01/python-for-的运用/" data-id="cibkwbaxb0000kmphh51pi51l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/for/">for</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python语法/">python语法</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-scrapy爬虫框架" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/05/10/scrapy爬虫框架/" class="article-date">
@@ -91,7 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/05/10/scrapy爬虫框架/" data-id="ci9i6r8t20000vlph44j8cqde" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2015/05/10/scrapy爬虫框架/" data-id="cibkwbaz9000hkmphodc6il3n" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapy/">scrapy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
@@ -130,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/04/20/提醒架构/" data-id="ci9i6nrtr0001uyph7scly0bs" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2015/04/20/提醒架构/" data-id="cibkwbayf0006kmphs1grjc9t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/golang/">golang</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
@@ -170,7 +247,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/04/20/博客规划/" data-id="ci9i6nrvy0009uyph0jmykvgy" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2015/04/20/博客规划/" data-id="cibkwbaz5000ekmphld52lc11" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
@@ -193,7 +270,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrapy/">scrapy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/for/">for</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python语法/">python语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrapy/">scrapy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -202,7 +279,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/golang/" style="font-size: 10px;">golang</a><a href="/tags/hexo/" style="font-size: 10px;">hexo</a><a href="/tags/python/" style="font-size: 10px;">python</a><a href="/tags/scrapy/" style="font-size: 10px;">scrapy</a><a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a><a href="/tags/架构/" style="font-size: 20px;">架构</a>
+      <a href="/tags/for/" style="font-size: 10px;">for</a><a href="/tags/golang/" style="font-size: 10px;">golang</a><a href="/tags/hexo/" style="font-size: 10px;">hexo</a><a href="/tags/python/" style="font-size: 20px;">python</a><a href="/tags/python语法/" style="font-size: 10px;">python语法</a><a href="/tags/scrapy/" style="font-size: 10px;">scrapy</a><a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a><a href="/tags/架构/" style="font-size: 20px;">架构</a>
     </div>
   </div>
 
@@ -211,7 +288,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -221,6 +298,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/07/01/python-for-的运用/">Python for 的运用</a>
+          </li>
         
           <li>
             <a href="/2015/05/10/scrapy爬虫框架/">Scrapy爬虫框架介绍</a>
