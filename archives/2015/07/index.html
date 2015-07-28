@@ -64,6 +64,107 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Shadowsocks配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/28/Shadowsocks配置/" class="article-date">
+  <time datetime="2015-07-28T07:12:32.000Z" itemprop="datePublished">2015-07-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/28/Shadowsocks配置/">Shadowsocks配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装服务端:">安装服务端:</h3><p>sudo pip install shadowsocks</p>
+<p>==========================</p>
+<h3 id="服务端配置:">服务端配置:</h3><pre><code>
+vim /etc/shadowsocks.json
+
+{
+    "server":"xx.xx.xx.xx",
+    "server_port":8388,
+    "password":"xxxxxxxxxx",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
+
+
+启动:ssserver -c /etc/shadowsocks.json
+后台启动:ssserver -c /etc/shadowsocks.json -d start
+关闭:ssserver -c /etc/shadowsocks.json -d stop
+开机启动把命令写入/etc/rc.local文件里
+</code></pre>
+
+<p>==========================</p>
+<h3 id="客户端win:">客户端win:</h3><p><a href="https://github.com/shadowsocks/shadowsocks-windows" target="_blank" rel="external">点击这里下载客户端</a><br>然后打开按里面的界面配置就好了</p>
+<p>==========================</p>
+<h3 id="客户端linux：">客户端linux：</h3><p>安装: sudo pip install shadowsocks</p>
+<pre><code>
+vim /etc/shadowsocks.json
+
+{
+    "server":"xx.xx.xx.xx",
+    "server_port":8388,
+    "password":"xxxxxxxxxxxx",
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
+
+启动:sslocal -c /etc/shadowsocks.json
+后台启动:sslocal -c /etc/shadowsocks.json -d start
+关闭:sslocal -c /etc/shadowsocks.json -d stop
+开机启动把命令写入/etc/rc.local文件里
+</code></pre>
+
+<p>==========================</p>
+<h3 id="SwitchySharp配置(只有linux需要,win直接全局代理就好了)">SwitchySharp配置(只有linux需要,win直接全局代理就好了)</h3><p>只填SOCKS 代理那行，127.0.0.1:1080<br>并且选择SOCKS v5</p>
+<p>==========================</p>
+<h3 id="linux下命令行使用shadowsocks(proxychains)">linux下命令行使用shadowsocks(proxychains)</h3><p>安装: apt-get install proxychains<br>只把[ProxyList]下面的socks4那行删掉改成</p>
+<pre><code>
+[ProxyList]
+socks5  127.0.0.1 1080
+</code></pre>
+
+<p>不要按官方的说明改，反正我按官方的改不行<br>附:<a href="https://github.com/shadowsocks/shadowsocks/wiki/Using-Shadowsocks-with-Command-Line-Tools" target="_blank" rel="external">官方说明</a></p>
+<p>=========================</p>
+<p>测试下是否可用: </p>
+<pre><code>
+proxychains curl http://www.twitter.com
+</code></pre>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://linjz.com/2015/07/28/Shadowsocks配置/" data-id="cicn0apu50000nn1o58br2134" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻墙/">翻墙</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-python列表解析" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/07/17/python列表解析/" class="article-date">
@@ -103,7 +204,7 @@ for s in sq:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/07/17/python列表解析/" data-id="cic7atqbc000oyk1oqjgr1oqw" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2015/07/17/python列表解析/" data-id="cicn0apuv000jnn1o20t1muy4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/语法糖/">语法糖</a></li></ul>
@@ -180,7 +281,7 @@ items函数返回的是键值对的元组的列表，而iteritems使用的是键
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/07/01/python-for-的运用/" data-id="cic7atqaf0000yk1omtgfnn91" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2015/07/01/python-for-的运用/" data-id="cicn0apuz000nnn1oolhcxun2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/for/">for</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python语法/">python语法</a></li></ul>
@@ -203,7 +304,7 @@ items函数返回的是键值对的元组的列表，而iteritems使用的是键
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/for/">for</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python语法/">python语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrapy/">scrapy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/语法糖/">语法糖</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/for/">for</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/golang/">golang</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python语法/">python语法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scrapy/">scrapy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/杂谈/">杂谈</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/架构/">架构</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/翻墙/">翻墙</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/语法糖/">语法糖</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -212,7 +313,7 @@ items函数返回的是键值对的元组的列表，而iteritems使用的是键
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/python语法/" style="font-size: 10px;">python语法</a> <a href="/tags/scrapy/" style="font-size: 10px;">scrapy</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/架构/" style="font-size: 15px;">架构</a> <a href="/tags/语法糖/" style="font-size: 10px;">语法糖</a>
+      <a href="/tags/for/" style="font-size: 10px;">for</a> <a href="/tags/golang/" style="font-size: 10px;">golang</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/python语法/" style="font-size: 10px;">python语法</a> <a href="/tags/scrapy/" style="font-size: 10px;">scrapy</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/杂谈/" style="font-size: 10px;">杂谈</a> <a href="/tags/架构/" style="font-size: 15px;">架构</a> <a href="/tags/翻墙/" style="font-size: 10px;">翻墙</a> <a href="/tags/语法糖/" style="font-size: 10px;">语法糖</a>
     </div>
   </div>
 
@@ -221,7 +322,7 @@ items函数返回的是键值对的元组的列表，而iteritems使用的是键
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -231,6 +332,10 @@ items函数返回的是键值对的元组的列表，而iteritems使用的是键
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/07/28/Shadowsocks配置/">Shadowsocks配置</a>
+          </li>
         
           <li>
             <a href="/2015/07/17/python列表解析/">Python列表解析</a>
@@ -246,10 +351,6 @@ items函数返回的是键值对的元组的列表，而iteritems使用的是键
         
           <li>
             <a href="/2015/04/20/提醒架构/">提醒架构</a>
-          </li>
-        
-          <li>
-            <a href="/2015/04/20/博客规划/">博客规划</a>
           </li>
         
       </ul>
