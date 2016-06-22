@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 工具 | linjzblog</title>
+  <title>Tag: 模拟器 | linjzblog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="linjzblog">
-<meta property="og:url" content="http://linjz.com/tags/工具/index.html">
+<meta property="og:url" content="http://linjz.com/tags/模拟器/index.html">
 <meta property="og:site_name" content="linjzblog">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -64,10 +64,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Shadowsocks配置" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-genymotion使用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/07/28/Shadowsocks配置/" class="article-date">
-  <time datetime="2015-07-28T07:12:32.000Z" itemprop="datePublished">2015-07-28</time>
+    <a href="/2016/06/22/genymotion使用/" class="article-date">
+  <time datetime="2016-06-22T09:17:02.000Z" itemprop="datePublished">2016-06-22</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/28/Shadowsocks配置/">Shadowsocks配置</a>
+      <a class="article-title" href="/2016/06/22/genymotion使用/">Genymotion使用</a>
     </h1>
   
 
@@ -86,77 +86,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="安装服务端"><a href="#安装服务端" class="headerlink" title="安装服务端:"></a>安装服务端:</h3><p>sudo pip install shadowsocks</p>
-<p>==========================</p>
-<h3 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置:"></a>服务端配置:</h3><pre><code>
-vim /etc/shadowsocks.json
-
-{
-    "server":"xx.xx.xx.xx",
-    "server_port":8388,
-    "password":"xxxxxxxxxx",
-    "timeout":300,
-    "method":"aes-256-cfb",
-    "fast_open": false
-}
-
-
-启动:ssserver -c /etc/shadowsocks.json
-后台启动:ssserver -c /etc/shadowsocks.json -d start
-关闭:ssserver -c /etc/shadowsocks.json -d stop
-开机启动把命令写入/etc/rc.local文件里
-</code></pre>
-
-<p>==========================</p>
-<h3 id="客户端win"><a href="#客户端win" class="headerlink" title="客户端win:"></a>客户端win:</h3><p><a href="https://github.com/shadowsocks/shadowsocks-windows" target="_blank" rel="external">点击这里下载客户端</a><br>然后打开按里面的界面配置就好了</p>
-<p>==========================</p>
-<h3 id="客户端linux："><a href="#客户端linux：" class="headerlink" title="客户端linux："></a>客户端linux：</h3><p>安装: sudo pip install shadowsocks</p>
-<pre><code>
-vim /etc/shadowsocks.json
-
-{
-    "server":"xx.xx.xx.xx",
-    "server_port":8388,
-    "password":"xxxxxxxxxxxx",
-    "local_address": "127.0.0.1",
-    "local_port":1080,
-    "timeout":300,
-    "method":"aes-256-cfb",
-    "fast_open": false
-}
-
-启动:sslocal -c /etc/shadowsocks.json
-后台启动:sslocal -c /etc/shadowsocks.json -d start
-关闭:sslocal -c /etc/shadowsocks.json -d stop
-开机启动把命令写入/etc/rc.local文件里
-</code></pre>
-
-<p>==========================</p>
-<h3 id="SwitchySharp配置-只有linux需要-win直接全局代理就好了"><a href="#SwitchySharp配置-只有linux需要-win直接全局代理就好了" class="headerlink" title="SwitchySharp配置(只有linux需要,win直接全局代理就好了)"></a>SwitchySharp配置(只有linux需要,win直接全局代理就好了)</h3><p>只填SOCKS 代理那行，127.0.0.1:1080<br>并且选择SOCKS v5</p>
-<p>==========================</p>
-<h3 id="linux下命令行使用shadowsocks-proxychains"><a href="#linux下命令行使用shadowsocks-proxychains" class="headerlink" title="linux下命令行使用shadowsocks(proxychains)"></a>linux下命令行使用shadowsocks(proxychains)</h3><p>安装: apt-get install proxychains<br>只把[ProxyList]下面的socks4那行删掉改成</p>
-<pre><code>
-[ProxyList]
-socks5  127.0.0.1 1080
-</code></pre>
-
-<p>不要按官方的说明改，反正我按官方的改不行<br>附:<a href="https://github.com/shadowsocks/shadowsocks/wiki/Using-Shadowsocks-with-Command-Line-Tools" target="_blank" rel="external">官方说明</a></p>
-<p>=========================</p>
-<p>测试下是否可用: </p>
-<pre><code>
-proxychains curl http://www.twitter.com
-</code></pre>
-
-
-
+        <h3 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h3><p>1.下载:<a href="https://www.genymotion.com/download/" target="_blank" rel="external">https://www.genymotion.com/download/</a><br>没有安装VirtualBox选择with VirtualBox<br>已经安装VirtualBox选择without VirtualBox</p>
+<p>2.安装系统:打开Genymotion–&gt;add–&gt;选择你要的系统–&gt;一路next</p>
+<p>3.一直提示下载ova失败，打开C:\Users\linji\AppData\Local\Genymobile\genymotion.log<br>搜索 .ova 就能找到ova下载地址<br>例如:<a href="http://files2.genymotion.com/dists/5.1.0/ova/genymotion_vbox86p_5.1_160609_162956.ova" target="_blank" rel="external">http://files2.genymotion.com/dists/5.1.0/ova/genymotion_vbox86p_5.1_160609_162956.ova</a><br>下载好后放到C:\Users\linji\AppData\Local\Genymobile\Genymotion\ova<br>如果没有ova文件夹创建就好了</p>
+<p>4.ova文件得和Genymotion一致，如果不一致会有各种各样的问题</p>
+<h3 id="二、坑"><a href="#二、坑" class="headerlink" title="二、坑"></a>二、坑</h3><p>下载的时候时快时慢算第一个坑<br>第二个坑:打开Genymotion不能使用管理员打开，而是直接用双击打开程序。这样拖拽到模拟器才能安装。</p>
+<p>第三个坑:<br>app安装不了,因为vbox是X86架构的，所以得安装ARM兼容.<br>去百度云盘下载Genymotion-ARM-Translation.zip</p>
+<p>第四个坑:<br>app闪退,无法解决的坑。选择安卓版本在4.3(不包含)以下的ova安装，才能正常使用app。<br>4.3及以上app可以进入但是使用的过程会停止或者闪退。官方bug说暂时没办法解决。<br>网上说什么显存啊、3D加速 都没用.</p>
+<p>第五个坑:<br>声音. 声音太小,也暂时无法解决.</p>
+<h3 id="三、使用"><a href="#三、使用" class="headerlink" title="三、使用"></a>三、使用</h3><p>其他就正常使用就好了.<br>app使用拖拽到模拟器就可以自动安装.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/07/28/Shadowsocks配置/" data-id="cipqpdilx0000xxjxiu4atiwu" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2016/06/22/genymotion使用/" data-id="cipqpdim60005xxjxojxop2hn" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻墙/">翻墙</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/genymotion/">genymotion</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/手机模拟器/">手机模拟器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模拟器/">模拟器</a></li></ul>
 
     </footer>
   </div>
