@@ -21,7 +21,7 @@
     <link rel="icon" href="/favicon.png">
   
   <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
 </head>
@@ -86,16 +86,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>环境准备:<br>    sudo apt-get install nodejs<br>    sudo apt-get install npm<br>    ubuntu会有问题要做软链接: sudo ln -s /usr/bin/nodejs  /usr/bin/node</p>
-<p>安装:<br>    <a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">http://ibruce.info/2013/11/22/hexo-your-blog/</a><br>    <a href="http://zipperary.com/2013/05/28/hexo-guide-2/" target="_blank" rel="external">http://zipperary.com/2013/05/28/hexo-guide-2/</a></p>
-<p>主题:<br>    <a href="https://github.com/tommy351/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/tommy351/hexo/wiki/Themes</a>    </p>
+        <p>注意:hexo各个版本经常会修改架构甚至不兼容<br>文档以官网文档为主<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">https://hexo.io/zh-cn/docs/</a></p>
+<p>环境准备:<br>    sudo apt-get install nodejs<br>    sudo apt-get install npm<br>    ubuntu会有问题要做软链接: sudo ln -s /usr/bin/nodejs  /usr/bin/node<br>    sudo npm install -g hexo<br>    sudo npm install hexo-server –save</p>
+<p>自己的项目根目录下执行:<br>    sudo rm -rf node_modules<br>    sudo npm install</p>
+<p>主题:<br>    <a href="https://github.com/tommy351/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/tommy351/hexo/wiki/Themes</a><br>    <a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></p>
 <p>makedown:<br>    <a href="http://wowubuntu.com/markdown/#p" target="_blank" rel="external">http://wowubuntu.com/markdown/#p</a><br>    <a href="http://zipperary.com/2013/05/22/introduction-to-markdown/" target="_blank" rel="external">http://zipperary.com/2013/05/22/introduction-to-markdown/</a><br>    <a href="http://xbeta.org/wiki/show/Markdown" target="_blank" rel="external">http://xbeta.org/wiki/show/Markdown</a></p>
 <p>异地:<br>    从github载自己的项目下来，然后对照下最新版本的package.json,因为可能hexo作者新版本有改这个json文件<br>    然后npm install 后，就可以用hexo s 看下效果</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2014/05/30/安装hexo/" data-id="cikxfprwk000bnv3n1t9gt6tr" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2014/05/30/安装hexo/" data-id="cipqnqlbn000rr7jxxrul79ow" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -203,7 +204,7 @@
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
   </div>
 </body>
 </html>

@@ -21,7 +21,7 @@
     <link rel="icon" href="/favicon.png">
   
   <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
 </head>
@@ -86,9 +86,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="u5B89_u88C5_u670D_u52A1_u7AEF_3A"><a href="#u5B89_u88C5_u670D_u52A1_u7AEF_3A" class="headerlink" title="安装服务端:"></a>安装服务端:</h3><p>sudo pip install shadowsocks</p>
+        <h3 id="安装服务端"><a href="#安装服务端" class="headerlink" title="安装服务端:"></a>安装服务端:</h3><p>sudo pip install shadowsocks</p>
 <p>==========================</p>
-<h3 id="u670D_u52A1_u7AEF_u914D_u7F6E_3A"><a href="#u670D_u52A1_u7AEF_u914D_u7F6E_3A" class="headerlink" title="服务端配置:"></a>服务端配置:</h3><pre><code>
+<h3 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置:"></a>服务端配置:</h3><pre><code>
 vim /etc/shadowsocks.json
 
 {
@@ -108,9 +108,9 @@ vim /etc/shadowsocks.json
 </code></pre>
 
 <p>==========================</p>
-<h3 id="u5BA2_u6237_u7AEFwin_3A"><a href="#u5BA2_u6237_u7AEFwin_3A" class="headerlink" title="客户端win:"></a>客户端win:</h3><p><a href="https://github.com/shadowsocks/shadowsocks-windows" target="_blank" rel="external">点击这里下载客户端</a><br>然后打开按里面的界面配置就好了</p>
+<h3 id="客户端win"><a href="#客户端win" class="headerlink" title="客户端win:"></a>客户端win:</h3><p><a href="https://github.com/shadowsocks/shadowsocks-windows" target="_blank" rel="external">点击这里下载客户端</a><br>然后打开按里面的界面配置就好了</p>
 <p>==========================</p>
-<h3 id="u5BA2_u6237_u7AEFlinux_uFF1A"><a href="#u5BA2_u6237_u7AEFlinux_uFF1A" class="headerlink" title="客户端linux："></a>客户端linux：</h3><p>安装: sudo pip install shadowsocks</p>
+<h3 id="客户端linux："><a href="#客户端linux：" class="headerlink" title="客户端linux："></a>客户端linux：</h3><p>安装: sudo pip install shadowsocks</p>
 <pre><code>
 vim /etc/shadowsocks.json
 
@@ -132,9 +132,9 @@ vim /etc/shadowsocks.json
 </code></pre>
 
 <p>==========================</p>
-<h3 id="SwitchySharp_u914D_u7F6E_28_u53EA_u6709linux_u9700_u8981_2Cwin_u76F4_u63A5_u5168_u5C40_u4EE3_u7406_u5C31_u597D_u4E86_29"><a href="#SwitchySharp_u914D_u7F6E_28_u53EA_u6709linux_u9700_u8981_2Cwin_u76F4_u63A5_u5168_u5C40_u4EE3_u7406_u5C31_u597D_u4E86_29" class="headerlink" title="SwitchySharp配置(只有linux需要,win直接全局代理就好了)"></a>SwitchySharp配置(只有linux需要,win直接全局代理就好了)</h3><p>只填SOCKS 代理那行，127.0.0.1:1080<br>并且选择SOCKS v5</p>
+<h3 id="SwitchySharp配置-只有linux需要-win直接全局代理就好了"><a href="#SwitchySharp配置-只有linux需要-win直接全局代理就好了" class="headerlink" title="SwitchySharp配置(只有linux需要,win直接全局代理就好了)"></a>SwitchySharp配置(只有linux需要,win直接全局代理就好了)</h3><p>只填SOCKS 代理那行，127.0.0.1:1080<br>并且选择SOCKS v5</p>
 <p>==========================</p>
-<h3 id="linux_u4E0B_u547D_u4EE4_u884C_u4F7F_u7528shadowsocks_28proxychains_29"><a href="#linux_u4E0B_u547D_u4EE4_u884C_u4F7F_u7528shadowsocks_28proxychains_29" class="headerlink" title="linux下命令行使用shadowsocks(proxychains)"></a>linux下命令行使用shadowsocks(proxychains)</h3><p>安装: apt-get install proxychains<br>只把[ProxyList]下面的socks4那行删掉改成</p>
+<h3 id="linux下命令行使用shadowsocks-proxychains"><a href="#linux下命令行使用shadowsocks-proxychains" class="headerlink" title="linux下命令行使用shadowsocks(proxychains)"></a>linux下命令行使用shadowsocks(proxychains)</h3><p>安装: apt-get install proxychains<br>只把[ProxyList]下面的socks4那行删掉改成</p>
 <pre><code>
 [ProxyList]
 socks5  127.0.0.1 1080
@@ -153,7 +153,7 @@ proxychains curl http://www.twitter.com
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/07/28/Shadowsocks配置/" data-id="cikxfprvt0000nv3nw21kquqi" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2015/07/28/Shadowsocks配置/" data-id="cipqnqlar0000r7jx72ajh7xd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/翻墙/">翻墙</a></li></ul>
@@ -204,7 +204,7 @@ for s in sq:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/07/17/python列表解析/" data-id="cikxfprwu000onv3n555a9xy0" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2015/07/17/python列表解析/" data-id="cipqnqlbc000er7jxolyc1xlz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/语法糖/">语法糖</a></li></ul>
@@ -285,7 +285,7 @@ items函数返回的是键值对的元组的列表，而iteritems使用的是键
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/07/01/python-for-的运用/" data-id="cikxfprww000snv3nc5ypdslk" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2015/07/01/python-for-的运用/" data-id="cipqnqlb10005r7jxoyea161e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/for/">for</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python语法/">python语法</a></li></ul>
@@ -324,7 +324,7 @@ items函数返回的是键值对的元组的列表，而iteritems使用的是键
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/05/10/scrapy爬虫框架/" data-id="cikxfprwo000hnv3nwkim240r" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2015/05/10/scrapy爬虫框架/" data-id="cipqnqlbf000ir7jxstz3wdi6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scrapy/">scrapy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
@@ -363,7 +363,7 @@ items函数返回的是键值对的元组的列表，而iteritems使用的是键
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/04/20/提醒架构/" data-id="cikxfprwd0006nv3n3dpxju5w" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2015/04/20/提醒架构/" data-id="cipqnqlbp000ur7jxrbgk9ely" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/golang/">golang</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/架构/">架构</a></li></ul>
@@ -403,7 +403,7 @@ items函数返回的是键值对的元组的列表，而iteritems使用的是键
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://linjz.com/2015/04/20/博客规划/" data-id="cikxfprwl000env3naj8iqz2q" class="article-share-link">Share</a>
+      <a data-url="http://linjz.com/2015/04/20/博客规划/" data-id="cipqnqlbi000or7jxfnk437kc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂谈/">杂谈</a></li></ul>
@@ -511,7 +511,7 @@ items函数返回的是键值对的元组的列表，而iteritems使用的是键
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
   </div>
 </body>
 </html>
